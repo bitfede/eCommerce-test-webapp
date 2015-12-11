@@ -2,8 +2,9 @@
         <article id="details-article" class="col-sm-8">
             <h1 id="article-title">Growth Hacking <span class="font-weight-light">Crash Course</span></h1>
             <h3><small>By <a href="#" data-toggle="modal" data-target="#author-modal">Mattan Griffel</a></small></h3>
+            <p><strong>---This page is part of an online course that teaches how to integrate Stripe with Rails---</strong></p>
 
-            <p>A growth hacker is a rare combination: someone with the right marketing and technical skills who can come up with clever marketing hacks and also track their results.</p>
+            <p>My name is Federico and I'm learning and experimenting with integrating payments in the Ruby on Rails Framework using Stripe!! This is a sample paid course available at OneMonth.com -- WORK IN PROGRESS</p>
 
             <p>In this talk, Mattan Griffel introduces you to the concept of Growth Hacking and shares his favorite tips for getting started as a growth hacker.</p>
             <p><strong>What You'll Learn</strong></p>
@@ -16,6 +17,25 @@
         </article>
         <aside id="details-aside" class="col-sm-4">
             <a id="btn-buy" href="receipt.html" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>I want this!</a>
+            <%= form_tag charges_path do %>
+              <article>
+                <% if flash[:error].present? %>
+                  <div id="error_explanation">
+                    <p><%= flash[:error] %></p>
+                  </div>
+                <% end %>
+                <label class="amount">
+                  <span>Amount: $5.00</span>
+                </label>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="TODO Create a configuration"
+                      data-description="A month's subscription"
+                      data-amount="500"
+                      data-locale="auto"></script>
+            <% end %>
+
             <ul id="details-infobox" class="list-group">
               <li class="list-group-item active clearfix">DETAILS</li>
               <li class="list-group-item">You'll get one video</li>
@@ -28,8 +48,8 @@
     </section>
 </div>
 <footer id="site-footer">
-Made by <%= image_tag('one-month-logo.svg', id: 'one-month-footer-logo', alt: 'One Month') %>
-</footer>
+Course Made by <%= image_tag('one-month-logo.svg', id: 'one-month-footer-logo', alt: 'One Month') %>
+Webapp coded by Federico</footer>
 
 <!-- Modal -->
 <div class="modal fade" id="author-modal">
