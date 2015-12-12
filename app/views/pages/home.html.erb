@@ -2,9 +2,9 @@
         <article id="details-article" class="col-sm-8">
             <h1 id="article-title">Growth Hacking <span class="font-weight-light">Crash Course</span></h1>
             <h3><small>By <a href="#" data-toggle="modal" data-target="#author-modal">Mattan Griffel</a></small></h3>
-            <p><strong>---This page is part of an online course that teaches how to integrate Stripe with Rails---</strong></p>
+            <p><u>---This page is part of an online course that teaches how to integrate Stripe with Rails---</u></p>
 
-            <p>My name is Federico and I'm learning and experimenting with integrating payments in the Ruby on Rails Framework using Stripe!! This is a sample paid course available at OneMonth.com -- WORK IN PROGRESS</p>
+            <p><strong>My name is Federico and I'm learning and experimenting with integrating payments in the Ruby on Rails Framework using Stripe!! This is a sample paid course available at OneMonth.com -- WORK IN PROGRESS</strong></p>
 
             <p>In this talk, Mattan Griffel introduces you to the concept of Growth Hacking and shares his favorite tips for getting started as a growth hacker.</p>
             <p><strong>What You'll Learn</strong></p>
@@ -30,7 +30,7 @@
               </article>
 
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                      data-key="TODO Create a configuration"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                       data-description="A month's subscription"
                       data-amount="500"
                       data-locale="auto"></script>
