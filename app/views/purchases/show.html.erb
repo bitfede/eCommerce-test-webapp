@@ -1,3 +1,24 @@
-<p> this is your purchase </p>
+<section id="content-receipt" class="clearfix">
+  <div id="receipt-container">
+    <div class="dotmatrix left"></div>
+    <div id="receipt-content">
+      <h4 id="receipt-title">Thank You! (test purchase)</h4>
+      <p><strong>RECEIPT</strong></p>
+      <div id="receipt-details" class="row clearfix">
+        <div class="col-sm-8 receipt-left">
+          <p><strong class="font-weight-heavy">Product Name</strong><br/> <span class="font-weight-light">Product Type</span></p>
+        </div>
+        <div class="col-sm-4">
+          $4.99
+        </div>
+      </div>
 
-<p> your purchase is <%= @purchase.inspect %> </p>
+      <button type="button" class="btn btn-success btn-xs">DOWNLOAD</button>
+      <footer id="receipt-footer">
+        <small>Your purchase is complete. We hope you enjoy it!</small>
+      </footer>
+    </div>
+    <div class="dotmatrix right"></div>
+  </div>
+  <div id="receipt-shadow"></div>
+</section>
