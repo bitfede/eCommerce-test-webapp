@@ -5,14 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
 growth_hacking = Product.create(title: "Product Title", 
-	subtitle: "Product Subtitle", author: "Author Name", price: "4.99", sku:"PROD1" , description: %{<p>**Product description goes here**</p>
+	subtitle: "Product Subtitle",
+	 author: "Author Name", 
+	 price: "4.99", length: "30 minutes", 
+	 sku:"PROD1" , 
+	 author_image_name: "teacher-image.jpg", 
+	 description: %{<p>**Product description goes here**</p>
             <p><strong>List of Product Features</strong></p>
             <ul class="no-indent">
                 <li>product feature 1</li>
                 <li>product feature 2</li>
                 <li>product feature 3</li>
                 <li>product feature 4</li>
-            </ul>})
+            </ul>}, 
+  author_description: %{<p>Hey, I'm Mattan Griffel, co-founder of the Y Combinator backed <a href="http://www.onemonth.com" target="_blank">One Month</a> where I teach the best selling One Month Rails and One Month Growth Hacking.</p>
+  <p>Why take my class? In the past I've advised companies like Pepsico, Bloomberg, GM, NYSE, and JPMorgan on growth hacking best practices. I've also spoken at New York University, Cooper Union and First Round Capital. My goal is to help you and other entrepreneurs rapidly grow your business. 
+  </p>
+  <p>Follow me on Twitter <a href="https://twitter.com/mattangriffel" target="_blank">@mattangriffel</a></p>})
