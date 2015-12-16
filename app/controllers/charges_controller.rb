@@ -2,23 +2,24 @@ class ChargesController < ApplicationController
 
 		def create
       
-      product = Product.find_by_sku("PROD1")
+      product = Product.find_by_sku("MONSUB1")
 
 		  customer = Stripe::Customer.create(
 		    :email => params[:stripeEmail],
-		    :source  => params[:stripeToken]
+		    :source  => params[:stripeToken],
+        :plan => "MONSUB1"
 		  )
 
-		  charge = Stripe::Charge.create(
-		    :customer    => customer.id,
-		    :amount      => amount: product.price_in_cents,
-		    :description => 'Product Description',
-		    :currency    => 'usd'
-		  )
+		  # charge = Stripe::Charge.create(
+		  #   :customer    => customer.id,
+		  #   :amount      => amount: product.price_in_cents,
+		  #   :description => 'Product Description',
+		  #   :currency    => 'usd'
+		  # )
       
       purchase = Purchase.create(email: params[:stripeEmail], card: params[:stripeToken],
-       amount: product.price_in_cents, description: charge.description,
-       currency: charge.currency, customer_id: customer.id, product_id: product.id, uuid: SecureRandom.uuid)
+       amount: product.price_in_cents, description: product.full_description,
+       currency: 'usd', customer_id: customer.id, product_id: product.id, uuid: SecureRandom.uuid)
 
     redirect_to purchase
 

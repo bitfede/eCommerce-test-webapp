@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 20151216143439) do
     t.string   "customer_id"
     t.string   "card"
     t.integer  "product_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "uuid"
   end
 
