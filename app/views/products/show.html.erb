@@ -1,4 +1,8 @@
     <% @product = @products %>
+    
+    <% content_for :returnbutton do %>
+    <a class="btn btn-default" href="/products" id="returnbutton" >Back to our products list</a>
+    <% end %>
 
     <% content_for :headprice do %>
 	    <span class="price">$<%= @product.price %></span>
@@ -59,8 +63,8 @@
               </li>
             </ul>
             <br>
-            <a class="btn btn-default" href="/products" >Back to our products list</a>
-            <!-- <button a id='btn-buy' type='button' class="btn btn-primary btn-lg btn-block">Back</button> -->
+            <a class="btn btn-default" href="/products" id="returnbutton" >Back to our product list</a>
+           
         </aside>
     </section>
 </div>
