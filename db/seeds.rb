@@ -9,6 +9,7 @@
 
 
 growth_hacking = Product.create(title: "Gold Monthly Subscription Plan", 
+  id: "1",
 	subtitle: "Product Subtitle",
 	 author: "Author Name", 
 	 price: "19.99", length: "6 months", 
@@ -21,6 +22,7 @@ growth_hacking = Product.create(title: "Gold Monthly Subscription Plan",
   <p>Follow me on Twitter <a href="https://twitter.com/mattangriffel" target="_blank">@mattangriffel</a></p>})
 
 second_growth_hacking = Product.create(title: "Silver Monthly Subscription Plan", 
+  id: "2",
   subtitle: "Product Subtitle",
    author: "Author Name", 
    price: "9.99", length: "6 months", 
@@ -33,6 +35,7 @@ second_growth_hacking = Product.create(title: "Silver Monthly Subscription Plan"
   <p>Follow me on Twitter <a href="https://twitter.com/mattangriffel" target="_blank">@mattangriffel</a></p>})
 
 third_growth_hacking = Product.create(title: "Bronze Monthly Subscription Plan", 
+  id: "3",
   subtitle: "Product Subtitle",
    author: "Author Name", 
    price: "4.99", length: "6 months", 
