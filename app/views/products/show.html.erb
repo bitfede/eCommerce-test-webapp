@@ -24,6 +24,7 @@
               <script src="https://checkout.stripe.com/checkout.js"></script>
               <%= hidden_field_tag 'stripeToken' %>
               <%= hidden_field_tag 'stripeEmail' %>
+              <%= hidden_field_tag 'product_id', @product.id %>
               <%= hidden_field_tag 'amount', @product.price_in_cents %>
               <button id='btn-buy' type='button' class="btn btn-success btn-lg btn-block">Buy Now!</button>
               
@@ -51,18 +52,20 @@
 
             <ul id="details-infobox" class="list-group">
               <li class="list-group-item active clearfix">PRODUCT DETAILS</li>
-              <li class="list-group-item">You'll get *Quantity*</li>
+              <li class="list-group-item">Plan description</li>
               <li class="list-group-item clearfix">
                 <span class="pull-left content-qualifier">Length</span>
                 <span class="pull-right"><%= @product.length %></span>
               </li>
             </ul>
+            <br>
+            <!-- <button id='btn-buy' type='button' class="btn btn-primary btn-lg btn-block">Back</button> -->
         </aside>
     </section>
 </div>
 <footer id="site-footer">
-Course Made by <%= image_tag('one-month-logo.svg', id: 'one-month-footer-logo', alt: 'One Month') %>
-Webapp coded by Federico</footer>
+
+Webapp coded by Federico after taking the payment-processing course from OneMonth.com</footer>
 
 <!-- Modal -->
 <div class="modal fade" id="author-modal">
